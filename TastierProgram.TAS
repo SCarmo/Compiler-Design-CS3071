@@ -1,0 +1,45 @@
+
+
+program Test {
+   const int limit = 1024;
+   int i;
+   struct test{
+      int age;
+      int height;
+      bool fresh;
+   };
+
+   void Test() {
+      int j, sum, g;
+      bool k;
+      struct test mytest;
+      struct test anotherTest;
+      //limit := 10;  error, cannot re-assign constant
+      j := limit;
+      j++;
+      j--;
+      mytest.age := 6;
+      anotherTest.age := 21;
+      mytest.age := 10;
+      mytest.height := 20;
+      for(j:=0; j<limit; j++;){
+        i++;
+      }
+      // errors
+      /*/ <= insert asterix between the two slashes to get rid of all purposely placed errors
+      k++;                  // not integer type
+      mytest.boolean := 9;  // not bool type
+      mytest.i := true;     // different types
+      notAStruct.hello := 10; // notAStruct not declared
+      anotherTest.boolean := true; // not declared
+
+      for(p:=0; p<10; p++)  // p undeclared
+        if (p%2==0)
+          q++;
+      //-----------------------------------------------------------------*/
+   }
+
+   void main() {
+     Test();
+   }
+}
